@@ -1,0 +1,40 @@
+<!DOCTYPE html> <!--Indica que el documento es HTML5, es decir, que se encuentra en la versión 5 de HTML-->
+<html lang="en"> <!--Indica que la pagina va a estar en inglés-->
+<head> <!--Abre la etiqueta heade de HTML-->
+    <meta charset="UTF-8"> <!--Indica que se van a usar carácteres especiales como por ejemplo tildes "´"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Configura el responsive inicial de la página, asegurandose de que pueda adaptarse a diferentes dispositivos con diferentes pantallas-->
+    <meta name="author" content="Emmanuel Ocampo"> <!--Indica el autor del documento-->
+    <title>Ejercicio 1</title> <!--Es el titulo que se mostrará en la pestaña del navegador; en este caso será "Ejercicio 1"-->
+    <script> // Inicia un bloque de código javascript por medio de la etiqueta script
+        function viajarConSuerte(){ //Se declara una función
+            var x = Math.random() * 10; // Se declara y se inicializa una variable local que tendrá como valor un número aleatorio hasta un valor máximo de 10
+            var URL; // Declarando pero no inicializando una variable local
+
+            // En caso de que el número aleatorio sea menor o igual a 3 se ejecutará el siguiente bloque de código
+            if (x <= 3){ 
+                x = 0; // Asigna el valor "0" a la variable "x"
+                URL = 'https://www.hotmail.com'; // Asigna el valor de una URL a la variable "URL"
+            }
+
+            // En caso de que el número aleatorio sea menor o igual a 6, se ejecutará el sguiente bloque de  código
+            else if (x <= 6){
+                x = 1; // Asigna el valor "1" a la variable "x"
+                URL = 'https://www.gmail.com'; // Asigna el valor de una URL a la variable "URL"
+            }
+
+            // En caso de que ninguna de las dos condiciones anteriores se cumpla se ejecutará el siguiente bloque de código
+            else{
+                x = 2; // Asigna el valor "2" a la variable "x"
+                URL = 'https://www.yahoo.com'; // Asigna el valor de una URL a la variable "URL"
+            }
+            location.assign(URL); // Hace que la URL actual en la pestaña del navegador se reemplace con el valor que tiene la variable URL
+        }
+    </script> <!--Cierra la etiqueta script-->
+</head> <!--Cierra la etiqueta head-->
+<body> <!--Abre la etiqueta body que es lo que se mostrará en la pantalla-->
+    <h1 id="titulo1">URL aleatoria</h1> <!--Crea un titulo con un identificador llamado "titulo1"-->
+    <div>  <!--Abre una etiqueta div, que actúa como contenedor-->
+        <a href="javascript:viajarConSuerte();" title="Viajando con suerte">Pulsa aqui para probar suerte</a> <!--Crea un hipervinculo que al dar click ejecuta una función de javascript llamada "viajarConSuerte"-->
+    </div> <!--Cierra la etiqueta div-->
+</body> <!--Cierra la etiqueta body-->
+</html> <!--Cierra la etiqueta html indicando que terminó el documento html-->
